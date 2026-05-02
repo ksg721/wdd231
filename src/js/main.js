@@ -1,8 +1,8 @@
-function loadParkData() {
-  document.getElementById("parkName").textContent = "Yellowstone";
-  document.getElementById("parkType").textContent = "National Park";
-  document.getElementById("parkStates").textContent = "WY, ID, MT";
-  document.querySelector("#heroImage").src = "/public/images/yellowstone.jpg";
+function updateParkInformation(){
+    document.getElementById("parkName").textContent = "Yellowstone"
+    document.querySelector("#parkType").textContent = "National Park"
+    document.querySelector("#parkStates").textContent = "ID, WY, MT"
+    document.getElementById("heroImage").src = "images/yellowstone.jpg"
 }
 
-loadParkData();
+updateParkInformation()
