@@ -75,7 +75,7 @@ function setupMapModalAndPromotions() {
   }
 }
 
-const MENU_DATA_URL = "./public/data/menu.json";
+const MENU_DATA_URL = "./data/menu.json";
 
 function buildHeaderMenuWithThen() {
   // Find the header menu <ul>.
