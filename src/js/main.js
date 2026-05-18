@@ -133,6 +133,8 @@ async function buildParkMenuWithAsyncAwait() {
     .join("");
 }
 
+
+
 async function init() {
 updateParkInformation();
   buildHeaderMenuWithThen();
