@@ -3,9 +3,9 @@ import { readFavorites, removeFavorite } from "./storage.js";
 export function renderParkData(park) {
   if (!park) return;
 
-  const parkName = document.getElementById("parkName");
-  const parkType = document.getElementById("parkType");
-  const parkStates = document.getElementById("parkStates");
+  const parkName = document.getElementById("park-name");
+  const parkType = document.getElementById("park-type");
+  const parkStates = document.getElementById("park-states");
   const parkImage = document.getElementById("park-image");
 
   parkName.textContent = park.name;
