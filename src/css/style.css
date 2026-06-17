@@ -368,6 +368,10 @@ footer {
   transition:
     transform var(--motion-fast) var(--motion-ease),
     opacity var(--motion-fast) var(--motion-ease);
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  padding: 0.5rem;
 }
 
 #header-menu-trigger:hover,
@@ -420,6 +424,7 @@ footer {
 #map-modal-content {
   animation: popIn 0.28s var(--motion-ease);
 }
+
 #park-info {
   animation: fadeUp 0.45s var(--motion-ease);
 }
