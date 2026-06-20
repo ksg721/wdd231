@@ -12,7 +12,7 @@ function setParkImage(park, parkImageEl) {
     : PARK_IMAGE_FALLBACK;
 
   parkImageEl.onerror = () => {
-    parkImageEl.onerror = null;
+    parkImageEl.onerror = null; // prevent loop if placeholder is missing
     parkImageEl.src = PARK_IMAGE_FALLBACK;
   };
 
@@ -26,9 +26,9 @@ function setParkImage(park, parkImageEl) {
 export function renderParkData(park) {
   if (!park) return;
 
-  const parkName = document.getElementById("park-name");
-  const parkType = document.getElementById("park-type");
-  const parkStates = document.getElementById("park-states");
+  const parkName = document.getElementById("parkName");
+  const parkType = document.getElementById("parkType");
+  const parkStates = document.getElementById("parkStates");
   const parkImage = document.getElementById("park-image");
 
   parkName.textContent = park.name;

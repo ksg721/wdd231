@@ -3,179 +3,186 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>NPS DEMO - WDD 231</title>
+    <link rel="stylesheet" href="/css/style.css" />
     <script type="module" src="/js/main.js" defer></script>
   </head>
-
   <body>
-    <header>
-      <h1>US NATIONAL PARKS</h1>
-      <div id="choose-park-container">
-        <button id="choose-park-btn" type="button">Choose A Park</button>
-        <select
-          id="choose-park-select"
-          class="is-hidden"
-          aria-label="Choose a park"
-        ></select>
-      </div>
-      <nav>
-        <button
-          id="header-menu-trigger"
-          type="button"
-          aria-expanded="false"
-          aria-controls="header-menu-options"
-        >
-          &equiv; MENU
-        </button>
+    <div id="content">
+      <header>
+        <h1>US NATIONAL PARKS</h1>
 
-        <div id="header-menu-options" class="is-hidden" aria-hidden="true">
-          <ul>
-            <li>INFO</li>
-            <li>ALERTS</li>
-            <li id="header-maps-link">MAPS</li>
-            <li>EVENTS</li>
-            <li>FEES</li>
-          </ul>
+        <div id="choose-park-container">
+          <button id="choose-park-btn" type="button">Choose A Park</button>
+          <select
+            id="choose-park-select"
+            class="is-hidden"
+            aria-label="Choose a park"
+          ></select>
         </div>
-      </nav>
-    </header>
-    <main>
-      <section id="favorites-section"></section>
-      <section id="hero">
-        <img
-          id="park-image"
-          fetchpriority="high"
-          src="images/us-map.jpg"
-          alt="map of us"
-        />
-      </section>
-      <section id="park-overview">
-        <h2 id="park-name">Park Name</h2>
-        <div>
-          <p id="park-type">Park Type</p>
-          <p id="park-states">Park States</p>
-        </div>
-      </section>
-      <section id="park-menu">
-        <ul>
-          <li>
-            <p>INFO</p>
-            <p>
-              <svg>
-                <use href="images/sprite.svg#info"></use>
-              </svg>
-            </p>
-          </li>
-          <li>
-            <p>ALERTS</p>
-            <p>
-              <svg>
-                <use href="images/sprite.svg#safety-caution-alerts"></use>
-              </svg>
-            </p>
-          </li>
-          <li id="park-maps-link">
-            <p>MAPS</p>
-            <p>
-              <svg>
-                <use href="images/sprite.svg#location_on"></use>
-              </svg>
-            </p>
-          </li>
-          <li>
-            <p>EVENTS</p>
-            <p>
-              <svg>
-                <use href="images/sprite.svg#event"></use>
-              </svg>
-            </p>
-          </li>
-          <li>
-            <p>FEES</p>
-            <p>
-              <svg>
-                <use href="images/sprite.svg#passes-and-fees"></use>
-              </svg>
-            </p>
-          </li>
-        </ul>
-      </section>
-      <section id="promotions">
-        <h2>Park Promotions:</h2>
-        <p id="promotion-message">Loading promotions...</p>
-      </section>
-      <section id="park-info">
-        <h2>Park Info</h2>
-        <p>
-          <strong>Description:</strong>
-          <span id="info-description">Loading...</span>
-        </p>
-        <p>
-          <strong>Weather:</strong> <span id="info-weather">Loading...</span>
-        </p>
-        <p>
-          <strong>Directions:</strong>
-          <span id="info-directions">Loading...</span>
-          <a
-            id="info-directions-link"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-          ></a>
-        </p>
-        <p>
-          <strong>Contact:</strong> <span id="info-contact">Loading...</span>
-        </p>
-        <p>
-          <strong>Address:</strong> <span id="info-address">Loading...</span>
-        </p>
-      </section>
 
-      <section id="park-fees" class="is-hidden">
-        <h2>Fees</h2>
-
-        <h3>Entrance Fees</h3>
-        <ul id="fees-entrance-fees">
-          <li>Loading...</li>
-        </ul>
-
-        <h3>Entrance Passes</h3>
-        <ul id="fees-entrance-passes">
-          <li>Loading...</li>
-        </ul>
-      </section>
-      <section
-        id="map-modal"
-        class="is-hidden"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="map-modal-title"
-        aria-hidden="true"
-      >
-        <div id="map-modal-content">
-          <h2 id="map-modal-title">Map</h2>
+        <nav>
           <button
-            id="map-modal-close"
+            id="header-menu-trigger"
             type="button"
-            aria-label="Close map dialog"
+            aria-expanded="false"
+            aria-controls="header-menu-options"
           >
-            X
+            ≡ MENU
           </button>
-          <iframe
-            id="mapFrame"
-            src="https://www.google.com/maps?q=Old+Faithful+Yellowstone+National+Park&output=embed&z=8"
-            width="100%"
-            height="420"
-            style="border: 0"
-            loading="lazy"
-          >
-          </iframe>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2026 WDD 231 Sample Project</p>
-    </footer>
+
+          <div id="header-menu-options" class="is-hidden" aria-hidden="true">
+            <ul>
+              <li>INFO</li>
+              <li>ALERTS</li>
+              <li id="header-maps-link">MAPS</li>
+              <li>EVENTS</li>
+              <li>FEES</li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section id="favorites-section" class="is-hidden"></section>
+        <section id="hero">
+          <img
+            id="park-image"
+            fetchpriority="high"
+            src="images/us-map.jpg"
+            alt="map of us"
+          />
+        </section>
+        <section id="overview">
+          <h2 id="parkName">Park Name</h2>
+          <div>
+            <p id="parkType">Park Type</p>
+            <p id="parkStates">Park States</p>
+          </div>
+        </section>
+        <section id="park-menu">
+          <ul>
+            <li>
+              <p>INFO</p>
+              <p>
+                <svg>
+                  <use href="/images/sprite.svg#info"></use>
+                </svg>
+              </p>
+            </li>
+            <li>
+              <p>ALERTS</p>
+              <p>
+                <svg>
+                  <use href="/images/sprite.svg#safety-caution-alerts"></use>
+                </svg>
+              </p>
+            </li>
+            <li id="park-maps-link">
+              <p>MAPS</p>
+              <p>
+                <svg>
+                  <use href="/images/sprite.svg#location_on"></use>
+                </svg>
+              </p>
+            </li>
+            <li>
+              <p>EVENTS</p>
+              <p>
+                <svg>
+                  <use href="/images/sprite.svg#event"></use>
+                </svg>
+              </p>
+            </li>
+            <li>
+              <p>FEES</p>
+              <p>
+                <svg>
+                  <use href="/images/sprite.svg#passes-and-fees"></use>
+                </svg>
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section id="promotions">
+          <h2>Park Promotions:</h2>
+          <p id="promotion-message">Loading promotions...</p>
+        </section>
+
+        <section id="park-info">
+          <h2>Park Info</h2>
+          <p>
+            <strong>Description:</strong>
+            <span id="info-description">Loading...</span>
+          </p>
+          <p>
+            <strong>Weather:</strong> <span id="info-weather">Loading...</span>
+          </p>
+          <p>
+            <strong>Directions:</strong>
+            <span id="info-directions">Loading...</span>
+            <a
+              id="info-directions-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+          </p>
+          <p>
+            <strong>Contact:</strong> <span id="info-contact">Loading...</span>
+          </p>
+          <p>
+            <strong>Address:</strong> <span id="info-address">Loading...</span>
+          </p>
+        </section>
+
+        <section id="park-fees" class="is-hidden">
+          <h2>Fees</h2>
+
+          <h3>Entrance Fees</h3>
+          <ul id="fees-entrance-fees">
+            <li>Loading...</li>
+          </ul>
+
+          <h3>Entrance Passes</h3>
+          <ul id="fees-entrance-passes">
+            <li>Loading...</li>
+          </ul>
+        </section>
+
+        <section
+          id="map-modal"
+          class="is-hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="map-modal-title"
+          aria-hidden="true"
+        >
+          <div id="map-modal-content">
+            <h2 id="map-modal-title">Map</h2>
+            <button
+              id="map-modal-close"
+              type="button"
+              aria-label="Close map dialog"
+            >
+              X
+            </button>
+            <iframe
+              id="mapFrame"
+              src="https://www.google.com/maps?q=Old+Faithful+Yellowstone+National+Park&output=embed&z=8"
+              width="100%"
+              height="420"
+              style="border: 0"
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>© 2026 WDD 231 Project Site</p>
+      </footer>
+    </div>
   </body>
 </html>
