@@ -1,14 +1,13 @@
 import js from "@eslint/js";
 import globals from "globals";
-import tseslint from "typescript-eslint";
+// import tseslint from "typescript-eslint";
 import importPlugin from "eslint-plugin-import";
 import promisePlugin from "eslint-plugin-promise";
 import sonarjs from "eslint-plugin-sonarjs";
 
 export default [
-  js.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
-
+  js.configs.recommended, 
+  
   {
     files: ["**/*.{js,mjs,cjs}"],
     languageOptions: {
@@ -23,34 +22,34 @@ export default [
       sonarjs,
     },
     rules: {
-      "no-unused-vars": "off",
-      "no-console": "off",
-      eqeqeq: "off",
-      curly: "off",
-      "prefer-const": "off",
-      "no-var": "off",
-      "no-shadow": "off",
-      "no-use-before-define": "off",
+      "no-unused-vars": "warn",
+      "no-console": "warn",
+      eqeqeq: "warn",
+      curly: "warn",
+      "prefer-const": "warn",
+      "no-var": "warn",
+      "no-shadow": "warn",
+      "no-use-before-define": "warn",
 
-      "import/no-unresolved": "off",
-      "import/order": "off",
+      "import/no-unresolved": "warn",
+      "import/order": "warn",
 
-      "promise/catch-or-return": "off",
-      "promise/no-return-wrap": "off",
+      "promise/catch-or-return": "warn",
+      "promise/no-return-wrap": "warn",
 
-      "@typescript-eslint/no-unnecessary-condition": "off",
-      "@typescript-eslint/strict-boolean-expressions": "off",
-      "@typescript-eslint/no-floating-promises": "off",
-      "@typescript-eslint/no-unsafe-assignment": "off",
-      "@typescript-eslint/no-unsafe-call": "off",
-      "@typescript-eslint/no-unsafe-member-access": "off",
-      "@typescript-eslint/no-unsafe-return": "off",
-      "@typescript-eslint/no-unsafe-argument": "off",
-      "@typescript-eslint/no-unused-vars": "off",
+      // "@typescript-eslint/no-unnecessary-condition": "warn",
+      // "@typescript-eslint/strict-boolean-expressions": "warn",
+      // "@typescript-eslint/no-floating-promises": "warn",
+      // "@typescript-eslint/no-unsafe-assignment": "warn",
+      // "@typescript-eslint/no-unsafe-call": "warn",
+      // "@typescript-eslint/no-unsafe-member-access": "warn",
+      // "@typescript-eslint/no-unsafe-return": "warn",
+      // "@typescript-eslint/no-unsafe-argument": "warn",
+      // "@typescript-eslint/no-unused-vars": "warn",
 
-      "sonarjs/no-duplicate-string": "off",
-      "sonarjs/no-identical-functions": "off",
-      "sonarjs/cognitive-complexity": ["off", 15],
+      "sonarjs/no-duplicate-string": "warn",
+      "sonarjs/no-identical-functions": "warn",
+      "sonarjs/cognitive-complexity": ["warn", 15],
     },
   },
 ];
